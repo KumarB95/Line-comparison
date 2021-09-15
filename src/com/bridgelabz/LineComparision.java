@@ -28,11 +28,19 @@ public class LineComparision {
         length2 = (float) Math.sqrt((Math.pow((a1-a2),2))+(Math.pow((b1-b2),2)));
         System.out.println("Length of lines are : "+length1+" & "+length2);
 
-        if (Objects.equals(length1, length2)){
+        /*if (Objects.equals(length1, length2)){
             System.out.println("Lines are of Equal length");
         }
         else {
             System.out.println("Lines are of different length");
+        }*/
+
+        if (Float.compare(length1, length2) >0) {
+            System.out.println("Line 1 is greater than line 2");}
+        else if (Float.compare(length1, length2) < 0) {
+            System.out.println("Line 2 is greater than line 1");}
+        else{
+            System.out.println("Both lines are Equal");
         }
     }
 }
